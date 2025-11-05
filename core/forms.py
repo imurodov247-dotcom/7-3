@@ -8,5 +8,6 @@ class ContactForm(forms.Form):
     
     
 class LoginForm(forms.Form):
-    username = forms.CharField()
+    email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput())
+    remember_me = forms.BooleanField(required=False, widget=forms.CheckboxInput())

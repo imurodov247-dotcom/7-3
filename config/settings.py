@@ -124,3 +124,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = 'core.CustomUser'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
+
+
+AUTHENCATION_BACKENDS = [
+    'core.backends.AuthEmailBackends',
+    'django.contrib.auth.backends.ModelBackends'
+]
+
+
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 14
